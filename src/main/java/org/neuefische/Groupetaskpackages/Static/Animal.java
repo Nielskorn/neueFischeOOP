@@ -3,7 +3,9 @@ package org.neuefische.Groupetaskpackages.Static;
 public class Animal {
     static int totalCount=0;
     int  instanceCount=0;
-
+ public Animal() {
+     incrementTotalCount();
+ }
 
     public static int incrementTotalCount(){
         totalCount++;
