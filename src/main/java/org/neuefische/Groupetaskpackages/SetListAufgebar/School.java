@@ -1,42 +1,45 @@
-package org.neuefische.Groupetaskpackages.arrayListTask;
+package org.neuefische.Groupetaskpackages.SetListAufgebar;
 
-import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 public class School {
-    List<Student> students;
+    Map<UUID,Student> students;
 
-    public School(List<Student> students) {
+    public School(Map<UUID,Student> students) {
         this.students = students;
     }
-    public List<Student> getStudents() {
+    public Map<UUID,Student> getStudents() {
         return students;
+
     }
-    public void setStudents(List<Student> students) {
+    public void setStudents(Map<UUID,Student> students) {
         this.students = students;
     }
     public void addStudent(Student student) {
-        students.add(student);
+        students.put(student.getStudentID(),student);
     }
-    public void removeStudent(int id) {
+    public void removeStudent(UUID id) {
         Student student =findStudent(id);
         students.remove(student);
     }
-    public Student findStudent(Integer id) {
+    public Student findStudent(UUID id) {
 //        for (Student student : students) {
 //            if(student.getStudentID() == id){
 //                return student;
 //            }
 //        }
-        return   students.stream().filter(student1 ->id.equals(student1.getStudentID()) ).findAny().orElse(null);
+       // return   students.stream().filter(student1 ->id.equals(student1.getStudentID()) ).findAny().orElse(null);
 
       //throw new IllegalArgumentException("this student does not exist");
+        return students.get(id);
     }
     public void printStudents() {
-        for (Student student : students) {
-            System.out.println(student.toString());
-        }
+        students.forEach((k,v)->{
+            System.out.println(v);
+        });
     }
-    public void printCoursesOfStudent(Integer id) {
+    public void printCoursesOfStudent(UUID id) {
         //student.getCourses().forEach(course -> System.out.println(course.toString()));
       Student student=findStudent(id);
         for(Course course :student.getCourses()){

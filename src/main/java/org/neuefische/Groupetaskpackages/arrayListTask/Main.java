@@ -1,10 +1,14 @@
 package org.neuefische.Groupetaskpackages.arrayListTask;
 
+import java.rmi.server.UID;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
+        UUID uniqueKey = UUID.randomUUID();
+        System.out.println (uniqueKey);
         List<Student>myStudents = new ArrayList<>();
         Student s1 = new Student("Johana", "Doe", 1998);
         myStudents.add(s1);
