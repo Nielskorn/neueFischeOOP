@@ -17,7 +17,8 @@ public class School {
     public void addStudent(Student student) {
         students.add(student);
     }
-    public void removeStudent(Student student) {
+    public void removeStudent(int id) {
+        Student student =findStudent(id);
         students.remove(student);
     }
     public Student findStudent(Integer id) {
