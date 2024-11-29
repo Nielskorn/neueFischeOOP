@@ -19,7 +19,7 @@ public class Main {
         school.addStudent(new Student("Johnson", "Doe", 1999));
         school.printStudents();
         System.out.println("#######################");
-        school.removeStudent(s1);
+        school.removeStudent(s1.getStudentID());
         school.printStudents();
         System.out.println("#######################");
         //school.findStudent(2000);
@@ -29,13 +29,10 @@ public class Main {
         courses.add(course);
         courses.add(course2);
         s3.setCourses(courses);
-        school.printCousesOfStudent(1994);
+        school.printCoursesOfStudent(1994);
         System.out.println("#######################");
         System.out.println( school.findStudent(1994));
-        int[]ints=new int[3];
-        ints[0]=1;
-        ints[1]=2;
-        ints[2]=3;
+
         Sack sack=new Sack();
         sack.add(1);
         sack.add(2);

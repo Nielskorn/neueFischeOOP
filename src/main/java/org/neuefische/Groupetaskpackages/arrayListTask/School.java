@@ -27,8 +27,8 @@ public class School {
 //                return student;
 //            }
 //        }
-        Student student = students.stream().filter(student1 ->id.equals(student1.getStudentID()) ).findAny().orElse(null);
-        return  student;
+
+        return   students.stream().filter(student1 ->id.equals(student1.getStudentID()) ).findAny().orElse(null);
 
       //throw new IllegalArgumentException("this student does not exist");
     }
@@ -37,7 +37,7 @@ public class School {
             System.out.println(student.toString());
         }
     }
-    public void printCousesOfStudent(Integer id) {
+    public void printCoursesOfStudent(Integer id) {
         //student.getCourses().forEach(course -> System.out.println(course.toString()));
       Student student=findStudent(id);
         for(Course course :student.getCourses()){
