@@ -1,4 +1,4 @@
-package org.neuefische.Interface;
+package org.neuefische.InterfaceLeason;
 
 public class Screwdriver implements CanMakeNoise {
     @Override

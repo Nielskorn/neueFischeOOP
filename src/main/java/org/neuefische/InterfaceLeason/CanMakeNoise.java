@@ -1,4 +1,4 @@
-package org.neuefische.Interface;
+package org.neuefische.InterfaceLeason;
 
 public interface CanMakeNoise {
     String makeNoise();

@@ -1,4 +1,4 @@
-package org.neuefische.Interface;
+package org.neuefische.InterfaceLeason;
 
 public class Main {
     public static void main(String[] args) {
